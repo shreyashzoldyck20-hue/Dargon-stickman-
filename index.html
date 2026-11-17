@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#101827">
+  <title>Dragon Stickman Battle</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <main id="game-wrap">
+    <header>
+      <div class="brand">🐉 DRAGON STICKMAN <span>BATTLE ARENA</span></div>
+      <button id="restart" aria-label="Restart match">↻</button>
+    </header>
+    <section class="hud">
+      <div class="fighter-hud blue">
+        <b>BLUE</b><div class="bar"><i id="p1-health"></i></div>
+        <small>Dragon <span id="p1-dragon-text">100</span>%</small><div class="bar dragon"><i id="p1-dragon"></i></div>
+      </div>
+      <div class="round">ROUND 1</div>
+      <div class="fighter-hud red">
+        <b>RED</b><div class="bar"><i id="p2-health"></i></div>
+        <small>Dragon <span id="p2-dragon-text">100</span>%</small><div class="bar dragon"><i id="p2-dragon"></i></div>
+      </div>
+    </section>
+    <div class="canvas-shell">
+      <canvas id="game" width="960" height="540" aria-label="Stickman dragon fighting game"></canvas>
+      <div id="message" class="message">BLUE VS RED<br><small>Fight with your dragon!</small></div>
+    </div>
+    <section class="controls">
+      <div class="control-group">
+        <button data-action="left" class="move">◀</button>
+        <button data-action="right" class="move">▶</button>
+        <button data-action="jump" class="move">⬆</button>
+      </div>
+      <div class="control-group attacks">
+        <button data-action="block">🛡</button>
+        <button data-action="attack">⚔</button>
+        <button data-action="fire">🔥</button>
+        <button data-action="special">🐉</button>
+      </div>
+    </section>
+    <footer>Move: ◀ ▶ · Jump: ⬆ · Attack: ⚔ · Dragon fire: 🔥 · Dragon special: 🐉</footer>
+  </main>
+  <script src="src/game.js"></script>
+</body>
+</html>
